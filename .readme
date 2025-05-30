@@ -1,0 +1,19 @@
+# Flask==2.3.3
+# Flask-CORS==4.0.0
+# pandas==2.0.3
+# spacy==3.6.1
+# scikit-learn==1.3.0
+# numpy==1.24.3
+# requests==2.31.0
+
+
+# pip install -r requirements.txt :>  use this command to install all library
+# ---------------------------------------------------------------
+# Or use command line 
+# ===============================================================
+# pip install Flask==2.3.3 Flask-CORS==4.0.0 pandas==2.0.3 spacy==3.6.1 scikit-learn==1.3.0 numpy==1.24.3 requests==2.31.0
+# pip install sentence-transformers==2.2.2
+
+
+# For enhanced performance (optional)
+# sentence-transformers==2.2.2
