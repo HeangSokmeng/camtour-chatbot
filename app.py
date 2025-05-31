@@ -13,7 +13,6 @@ app = Flask(__name__)
 CORS(app, origins=['http://localhost:8000', 'https://yourdomain.com'])
 
 nlp = spacy.load("en_core_web_md")
-
 try:
     url = 'http://127.0.0.1:8000/chatbot/cambodia_travel_data.json'
     response = requests.get(url)
