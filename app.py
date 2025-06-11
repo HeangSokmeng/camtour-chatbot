@@ -10,8 +10,6 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 
 app = Flask(__name__)
-CORS(app, origins=['http://localhost:8000', 'https://yourdomain.com'])
-
 nlp = spacy.load("en_core_web_md")
 try:
     url = 'http://127.0.0.1:8000/chatbot/cambodia_travel_data.json'
@@ -154,19 +152,15 @@ def detect_intent(doc, raw_message):
         'bye', 'goodbye', 'see you', 'farewell', 'take care',
         'see ya', 'catch you later', 'until next time'
     ]
-    
     for pattern in greeting_patterns:
         if pattern in raw_lower:
             return 'greeting'
-    
     for pattern in thank_you_patterns:
         if pattern in raw_lower:
             return 'thank_you'
-    
     for pattern in goodbye_patterns:  
         if pattern in raw_lower:
             return 'goodbye'
-    
     return 'query'
 
 def get_top_suggestions():
