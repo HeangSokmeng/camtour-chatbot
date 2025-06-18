@@ -12,7 +12,7 @@ from sklearn.metrics.pairwise import cosine_similarity
 app = Flask(__name__)
 nlp = spacy.load("en_core_web_md")
 try:
-    url = 'http://127.0.0.1:8000/chatbot/cambodia_travel_data.json'
+    url = 'https://camtour-api.chandalen.dev/chatbot/cambodia_travel_data.json'
     response = requests.get(url)
     response.raise_for_status()
     travel_data = response.json()
